@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+    <text class='specific-offer-title'>这是一个title</text>
+  </view>
+  <view class='header'>
+    <view class='chooseBg'>
+      <view class='chooseCity'>
+        <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArray}}">
+          <view class='itemName'> {{addressName}}</view>
+          <image src='/../images/down_arrow.png'></image>
+        </picker>
+      </view>
+    </view>
+    <view class='chooseBg'>
+      <view class='chooseCity'>
+        <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArray}}">
+          <view class='itemName'>{{category}}</view>
+          <image src='/../images/down_arrow.png'></image>
+        </picker>
+      </view>
+    </view>
+
+    <view class="atHome" wx:if="{{goodList.length > 1}}">
+      <info-title title="本地精选" is-change="{{goodList.length > 1}}" bind:changeNext="selectLocationJobs" ptpId="locationChange"></info-title>
+      <location-select resourseFrom="{{goodList}}" subResouseFrom="{{goodList}}" isAddress="true" screenIndex="{{localIndex}}"></location-select>
+    </view>
+
+  </view>
+  <view class='center-test'></view>
+  <view class="usermotto">
+    <text>{{motto}}</text>
+    <view class="user-describe">
+      <text>{{describe}}</text>
+    </view>
+  </view>
+</view>

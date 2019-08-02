@@ -1,0 +1,4 @@
+<!--pages/job/job.wxml-->
+<view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
+  {{idx}}:{{itemName.jobTitle}}:{{itemName.pay}}
+</view>

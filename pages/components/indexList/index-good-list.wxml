@@ -1,0 +1,6 @@
+<!--pages/components/indexList/index-good-list.wxml-->
+<view class='jobList'>
+  <view class='job_item' wx:for="{{resourseFrom}}" wx:key="{{index}}" data-index="{{index}}" bindtap="_universalJump1" data-contentid="{{item.contentId}}">
+  <view class='atHome_title'>{{item.title}}</view>
+  </view>
+  </view>

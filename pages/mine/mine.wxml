@@ -1,0 +1,5 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <button bindtap='login'>login</button>
+  <view wx:if="{{token}}">已登录</view>
+</view>

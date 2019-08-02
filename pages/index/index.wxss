@@ -1,0 +1,129 @@
+/**index.wxss**/
+
+.userinfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  justify-content: center;
+  align-content: center;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+  text-align: center;
+  flex-direction: row;
+}
+
+.user-describe{
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.imageStyle {
+  width: 208rpx;
+  height: 208rpx;
+  margin-top: 200rpx;
+}
+
+.specific-offer-title {
+  font-size: 30rpx;
+}
+
+.header {
+  width: 100%;
+  height: 100rpx;
+  flex-direction: row;
+  display: flex;
+}
+
+.chooseBg {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.chooseCity {
+  width: 50%;
+  height: 80rpx;
+  border-radius: 5px;
+  background: #ffa500;
+  float: left;
+  display: flex;
+  justify-content: center;
+}
+
+.itemName{
+  max-width: 70%;
+  width: auto;
+  line-height:80rpx;
+  font-size: 28rpx;
+  float: left;
+  margin-left: 20rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #3c3c3c;
+}
+
+.chooseCity image {
+  width: 25rpx;
+  height: 12rpx;
+  margin-right: 20rpx;
+  margin-left: 10rpx;
+  margin-top: 35rpx;
+}
+
+
+
+
+.center-test{
+  align-content: center;
+  width: 50%;
+  height: 80rpx;
+  background: red;
+  position: absolute;
+  margin-left: 25%;
+}
+
+.partRecord {
+  width: 100%;
+  display: flex;
+  margin-top: 32rpx;
+}
+
+.viewlist {
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 3;
+}
+
+.viewlist image {
+  width: 96rpx;
+  height: 96rpx;
+  align-self: center;
+}
+
+.viewlist text {
+  color: #3C3C3C;
+  font-size: 24rpx;
+  justify-content: center;
+  display: block;
+}

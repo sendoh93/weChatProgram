@@ -4,25 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:[{
-      jobTitle: '青团社招助理',
-      pay: '50元/天'
-    }, {
-        jobTitle: '青团社招助理',
-        pay: '50元/天'
-      }, {
-        jobTitle: '青团社招助理',
-        pay: '50元/天'
-      }, {
-        jobTitle: '青团社招助理',
-        pay: '50元/天'
-      }, {
-        jobTitle: '青团社招助理',
-        pay: '50元/天'
-      }, {
-        jobTitle: '青团社招助理',
-        pay: '50元/天'
-      }]
+  
   },
 
   /**

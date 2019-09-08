@@ -7,7 +7,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "小家",
+    "navigationBarTitleText": "商家联盟",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -22,7 +22,7 @@
         "iconPath": "images/joblist.png",
         "pagePath": "pages/job/job",
         "selectedIconPath": "images/joblists.png",
-        "text":"活动"
+        "text":"分享"
       },
       {
         "iconPath": "images/mine.png",

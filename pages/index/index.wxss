@@ -20,6 +20,12 @@
   color: #aaa;
 }
 
+.vertical{
+  width: 100%;
+  height: 20rpx;
+  background-color: #F6F6F6
+}
+
 .usermotto {
   margin-top: 200px;
   text-align: center;
@@ -42,7 +48,17 @@
 }
 
 .specific-offer-title {
-  font-size: 30rpx;
+  margin-left: 40rpx;
+  padding-top: 20rpx;
+}
+
+.specific-offer-title text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.banner{
+  width: 100%;
 }
 
 .header {
@@ -60,10 +76,10 @@
 }
 
 .chooseCity {
-  width: 50%;
+  width: 100%;
   height: 80rpx;
   border-radius: 5px;
-  background: #ffa500;
+  background: white;
   float: left;
   display: flex;
   justify-content: center;
@@ -79,7 +95,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: #3c3c3c;
+  color: #000000;
 }
 
 .chooseCity image {

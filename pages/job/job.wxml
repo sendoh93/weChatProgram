@@ -1,4 +1,4 @@
 <!--pages/job/job.wxml-->
-<view wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName">
-  {{idx}}:{{itemName.jobTitle}}:{{itemName.pay}}
+<view class="center">
+  <text>这里放一张客服人员二维码</text>
 </view>

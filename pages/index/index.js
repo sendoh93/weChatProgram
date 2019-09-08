@@ -27,7 +27,7 @@ Page({
       id: 4,
       name: '水晶城'
     }, ],
-    adrressArray: ['湖滨银泰', '万达广场', '城西银泰', '中大银泰', '水晶城'],
+    adrressArray: ['万达广场', '城西银泰', '湖滨银泰', '中大银泰', '水晶城'],
     categoryArray: ['烧烤', '奶茶', '中餐', '西餐', '炸鸡', '港式', '西北菜'],
     goodList: [{
       "name": "小老头烧烤",
@@ -42,7 +42,7 @@ Page({
       "price": "180元/位",
       "address": "万达广场1F金街道308"
     }],
-    motto: '欢迎来到我的小空间',
+    motto: '商家联盟',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -65,16 +65,24 @@ Page({
   },
   onLoad: function() {
     that = this;
-    app.ajax({
-      url: '/merchant-business',
-      method: GET,
-
-    })
-    if (app.globalData.userInfo) {
+    if (app.globalData.userInfo.token) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
+      // app.ajax({
+      //   url: '/merchant-business',
+      //   method: "GET",
+      //   data: {
+      //     fields: "name",
+      //   },
+      //   success: function (res) {
+      //     console.log(res)
+      //     that.setData({
+
+      //     })
+      //   }
+      // })
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -97,7 +105,7 @@ Page({
       })
     }
     this.setData({
-      describe: "ypf的个人小家"
+      describe: "商家联盟"
     })
   },
   getUserInfo: function(e) {

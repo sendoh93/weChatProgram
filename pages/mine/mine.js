@@ -89,6 +89,7 @@ Page({
       },
       data: json
     }).then((res) => {
+      console.log(res.rspdata.items[0].access_token)
       wx.setStorage({
         key: 'token',
         data: res.rspdata.items[0].access_token,

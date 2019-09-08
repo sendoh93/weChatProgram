@@ -1,1 +1,14 @@
 /* pages/job/job.wxss */
+
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.center text {
+  justify-self: center;
+}

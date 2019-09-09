@@ -55,6 +55,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  applyEntry: function(){
+    wx.navigateTo({
+      url: '../applyEntry/applyEntry'
+    })
+  },
   helloClick: function() {
     wx.showToast({
       title: '点击了我名字',

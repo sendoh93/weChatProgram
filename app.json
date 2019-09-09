@@ -2,7 +2,11 @@
   "pages": [
     "pages/index/index",
     "pages/job/job",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/buyShare/bugSahre",
+    "pages/primaryAgent/primaryAgent",
+    "pages/merchant/merchant",
+    "pages/applyEntry/applyEntry"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,13 +26,13 @@
         "iconPath": "images/joblist.png",
         "pagePath": "pages/job/job",
         "selectedIconPath": "images/joblists.png",
-        "text":"分享"
+        "text": "分享"
       },
       {
         "iconPath": "images/mine.png",
         "pagePath": "pages/mine/mine",
         "selectedIconPath": "images/mines.png",
-        "text":"我的"
+        "text": "我的"
       }
     ]
   },

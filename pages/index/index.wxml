@@ -7,8 +7,9 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view> -->
-  <view class="banner">
+  <view class="top">
     <image class="banner" mode="widthFix" width="100rpx" src="../../images/top_banner.png"></image>
+    <text>点击购买嗨遍全嘉兴</text>
   </view>
   <view class="vertical"></view>
   <view class="specific-offer-title">
@@ -19,7 +20,7 @@
       <view class='chooseCity'>
         <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArray}}">
           <view class='itemName'> {{addressName}}</view>
-          <image src='/../images/down_arrow.png'></image>
+          <image mode="widthFix" src='/../images/down_arrow.png'></image>
         </picker>
       </view>
     </view>
@@ -40,5 +41,6 @@
   <view wx:if="{{goodList.length > 1}}" wx:for="{{goodList}}" wx:for-index="idx" wx:for-item="itemName">
     {{idx}}:{{itemName.name}}:{{itemName.price}}
   </view>
-
+  <view class="tips"><text>更多商户持续加入中</text></view>
+  <view><button bindtap="applyEntry" class="enterBtn"><image class='btnImg' src='../../images/icon_add.png'></image><view>商家入驻</view></button></view>
 </view>

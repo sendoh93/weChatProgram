@@ -1,0 +1,11 @@
+/* pages/applyEntry/applyEntry.wxss */
+.editView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editView text {
+  font-size: 28rpx;
+  color: #484246;
+}

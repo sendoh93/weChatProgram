@@ -1,0 +1,20 @@
+<!--pages/applyEntry/applyEntry.wxml-->
+<view class="normalBg">
+  <view class="editView">
+    <text>姓名</text>
+    <input type="text" placeholder="请输入您的名字"></input>
+    </view>
+    <view></view>
+
+    <view>
+    <text>手机号/微信</text>
+    <input type="text" placeholder="请输入您的电话/微信号"></input>
+    </view>
+    <view></view>
+
+    <view>
+    <text>商户名</text>
+    <input type="text" placeholder="请输入您的商户名"></input>
+    </view>
+    <view></view>
+  </view>

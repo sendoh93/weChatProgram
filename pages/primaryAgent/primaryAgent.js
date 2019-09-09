@@ -1,35 +1,33 @@
-// pages/job/job.js
+// pages/primaryAgent/primaryAgent.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-  
-  },
-
-  route2Buy: function () {
-    wx.navigateTo({
-      url: '../buyShare/bugSahre'
-    })
-  },
-
-  route2Share: function () {
-    wx.navigateTo({
-      url: '../buyShare/bugSahre'
-    })
-  },
-
-  route2Proxy: function () {
-    wx.navigateTo({
-      url: '../primaryAgent/primaryAgent'
-    })
+    listData:[{
+      id:0,
+      name:'杨平帆',
+      openTime:'2019.07.15',
+      memberCount:'8人'
+    }, {
+        id: 1,
+        name: '杨平帆',
+        openTime: '2019.07.15',
+        memberCount: '8人'
+      }, {
+        id: 2,
+        name: '杨平帆',
+        openTime: '2019.07.15',
+        memberCount: '8人'
+      }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

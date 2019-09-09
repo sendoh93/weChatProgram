@@ -20,10 +20,10 @@
   color: #aaa;
 }
 
-.vertical{
+.vertical {
   width: 100%;
   height: 20rpx;
-  background-color: #F6F6F6
+  background-color: #f6f6f6;
 }
 
 .usermotto {
@@ -32,7 +32,7 @@
   flex-direction: row;
 }
 
-.user-describe{
+.user-describe {
   justify-content: center;
   justify-self: center;
   align-items: center;
@@ -57,8 +57,18 @@
   font-weight: 500;
 }
 
-.banner{
+.top {
   width: 100%;
+  z-index: -1;
+}
+
+.top text {
+  z-index: 1;
+}
+
+.banner {
+  width: 100%;
+  z-index: -1;
 }
 
 .header {
@@ -85,17 +95,17 @@
   justify-content: center;
 }
 
-.itemName{
+.itemName {
   max-width: 70%;
   width: auto;
-  line-height:80rpx;
+  line-height: 80rpx;
   font-size: 28rpx;
   float: left;
   margin-left: 20rpx;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  color: #000000;
+  color: #000;
 }
 
 .chooseCity image {
@@ -106,10 +116,7 @@
   margin-top: 35rpx;
 }
 
-
-
-
-.center-test{
+.center-test {
   align-content: center;
   width: 50%;
   height: 80rpx;
@@ -138,8 +145,45 @@
 }
 
 .viewlist text {
-  color: #3C3C3C;
+  color: #3c3c3c;
   font-size: 24rpx;
   justify-content: center;
   display: block;
+}
+
+.tips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  align-content: center;
+}
+
+.tips text {
+ font-size: 28rpx;
+  color: #7D7D7D;
+}
+
+.enterBtn {
+  width: 260rpx;
+  height: 88rpx;
+  background-color: #e9f5ff;
+  color: #3040ee;
+  margin-bottom: 40rpx;
+  border-radius: 4rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 14rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.enterBtn::after {
+  border: 0;
 }

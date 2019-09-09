@@ -1,4 +1,14 @@
 <!--pages/job/job.wxml-->
 <view class="center">
-  <text>这里放一张客服人员二维码</text>
+  <view class="shareItem" bindtap="route2Buy">
+    <text>购卡二维码分享</text>
+  </view>
+
+  <view class="shareItem" bindtap="route2Share">
+  <text>普通小程序分享</text>
+  </view>
+
+  <view class="shareItem" bindtap="route2Proxy">
+  <text>申请代理</text>
+  </view>
 </view>

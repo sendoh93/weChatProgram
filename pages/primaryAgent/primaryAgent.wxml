@@ -1,0 +1,27 @@
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">昵称</view>
+    <view class="th">开通时间</view>
+    <view class="th ">已发展人数</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.name}}</view>
+      <view class="td">{{item.openTime}}</view>
+      <view class="td">{{item.memberCount}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.name}}</view>
+      <view class="td">{{item.openTime}}</view>
+      <view class="td">{{item.memberCount}}</view>
+    </view>
+  </block>
+</view>
+<view class="padding flex flex-direction" style="font-size:30rpx">
+  <button class="cu-btn bg-blue padding margin-tb-sm lg" role="button"><text class="cuIcon-add" style="font-size:45rpx"></text>新增一级代理</button>
+  <view class="cardTitle flex-treble" style="align-self:center">
+  <text class="cuIcon-question" ></text>如何新增一级代理
+  </view>
+   
+</view>

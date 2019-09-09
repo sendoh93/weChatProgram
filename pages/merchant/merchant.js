@@ -1,35 +1,18 @@
-// pages/job/job.js
+// pages/merchant/merchant.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-  
-  },
 
-  route2Buy: function () {
-    wx.navigateTo({
-      url: '../buyShare/bugSahre'
-    })
-  },
-
-  route2Share: function () {
-    wx.navigateTo({
-      url: '../buyShare/bugSahre'
-    })
-  },
-
-  route2Proxy: function () {
-    wx.navigateTo({
-      url: '../primaryAgent/primaryAgent'
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

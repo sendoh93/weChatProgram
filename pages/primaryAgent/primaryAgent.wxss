@@ -1,0 +1,37 @@
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 82rpx;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    font-weight:300;
+  font-size: 24rpx;
+}
+.bg-w{
+  background: white;
+}
+.bg-g{
+  background: white;
+  border-bottom: 1rpx solid #E2E2E2;
+  border-top: 1rpx solid #E2E2E2;
+  margin-left: 32rpx;
+  margin-top: 32rpx;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  display: flex;
+  height: 82rpx;
+  align-items: center;
+  font-weight:400;
+  font-size: 28rpx;
+}

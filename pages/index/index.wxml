@@ -38,9 +38,24 @@
     </view>
 
   </view>
-  <view wx:if="{{goodList.length > 1}}" wx:for="{{goodList}}" wx:for-index="idx" wx:for-item="itemName">
-    {{idx}}:{{itemName.name}}:{{itemName.price}}
+  <view wx:if="{{goodList.length > 1}}">
+    <view class="listPart" wx:for="{{goodList}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class="partJob_left">
+        <image src="/../images/company_logo.png" mode="widthFix" width="200rpx" height="144rpx"></image>
+      </view>
+      {{idx}}:{{itemName.name}}:{{itemName.price}}
+    </view>
   </view>
-  <view class="tips"><text>更多商户持续加入中</text></view>
-  <view><button bindtap="applyEntry" class="enterBtn"><image class='btnImg' src='../../images/icon_add.png'></image><view>商家入驻</view></button></view>
+  <view wx:else class="noneList">
+    <text>暂无相关兼职哦</text>
+  </view>
+  <view class="tips">
+    <text>更多商户持续加入中</text>
+  </view>
+  <view>
+    <button bindtap="applyEntry" class="enterBtn">
+      <image class='btnImg' src='../../images/icon_add.png'></image>
+      <view>商家入驻</view>
+    </button>
+  </view>
 </view>

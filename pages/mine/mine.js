@@ -79,28 +79,59 @@ Page({
   login() {
     var that = this;
     var json = {
-      "username": "chenjie",
-      "password": "111111"
+      "encryptedData": "chenjie",
+      "pid": "",
+      "code": "chenjie",
+      "iv": "iv"
     };
-    app.ajax({
-      url: '/login',
-      header: {
-        'content-type': 'application/json;charset=utf-8'
-      },
-      data: json
-    }).then((res) => {
-      console.log(res.rspdata.items[0].access_token)
-      wx.setStorage({
-        key: 'token',
-        data: res.rspdata.items[0].access_token,
-        success: function(e) {
-          that.setData({
-            token: true
+
+    wx.login({
+      success(res) {
+        if (res.code) {
+          //发起网络请求
+          json.code = res.code;
+          console.log(res);
+          // 必须是在用户已经授权的情况下调用
+          wx.authorize({
+            scope: "scope.userInfo"
           })
-          console.log(e)
+          wx.getUserInfo({
+            success: function(res) {
+              console.log(res);
+              json.iv = res.iv;
+              json.encryptedData = res.encryptedData;
+              console.log(json.iv);
+              console.log(json.encryptedData);
+              app.ajax({
+                url: '/login',
+                header: {
+                  'content-type': 'application/json;charset=utf-8'
+                },
+                data: json
+              }).then((res) => {
+                console.log(res.rspdata.access_token)
+                wx.setStorage({
+                  key: 'token',
+                  data: res.rspdata.access_token,
+                  success: function(e) {
+                    that.setData({
+                      token: true
+                    })
+                    console.log(e)
+                  }
+                })
+              });
+            },
+            fail: function(res) {
+              console.log(res);
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
         }
-      })
-    });
+      }
+    })
+
 
   }
 })

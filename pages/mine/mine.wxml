@@ -1,6 +1,11 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="cu-card ">
     <view class="cu-item flex p-xs justify-start" style="background-color:black">
+    <button bindtap="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录按钮</button>
+    </view>
+  </view>
+  <view class="cu-card ">
+    <view class="cu-item flex p-xs justify-start" style="background-color:black">
       <view class="cardTitle flex-treble">
         <text class="cuIcon-scan"></text><text>核销</text>
         <text class="cradtitleText">仅限客户使用</text>

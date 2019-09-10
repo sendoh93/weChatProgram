@@ -18,16 +18,16 @@
   <view class='header'>
     <view class='chooseBg'>
       <view class='chooseCity'>
-        <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArray}}">
-          <view class='itemName'> {{addressName}}</view>
+        <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArrayList}}" value="{{addressIndex}}"range-key="{{'name'}}">
+          <view class='itemName'> {{adrressArrayList[addressIndex].name}}</view>
           <image mode="widthFix" src='/../images/down_arrow.png'></image>
         </picker>
       </view>
     </view>
     <view class='chooseBg'>
       <view class='chooseCity'>
-        <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArray}}">
-          <view class='itemName'>{{category}}</view>
+        <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArrayList}}" value="{{categoryIndex}}"range-key="{{'name'}}">
+          <view class='itemName'>{{categoryArrayList[categoryIndex].name}}</view>
           <image src='/../images/down_arrow.png'></image>
         </picker>
       </view>

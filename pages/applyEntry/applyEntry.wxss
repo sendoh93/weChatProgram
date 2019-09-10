@@ -1,11 +1,27 @@
 /* pages/applyEntry/applyEntry.wxss */
+.editContent {
+    width: 100%;
+    background-color: white;
+}
 .editView {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    height: 102rpx;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+    justify-content: center;
+    border-bottom: 1rpx solid #E2E2E2 ;
 }
 
 .editView text {
-  font-size: 28rpx;
-  color: #484246;
+    width: 30%;
+    font-size: 28rpx;
+    color: #484246;
+    margin-left: 32rpx;
+}
+
+.editView input {
+    width: 70%;
+    margin-right: 32rpx;
 }

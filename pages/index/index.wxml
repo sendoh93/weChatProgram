@@ -19,31 +19,33 @@
     <view class='chooseBg'>
       <view class='chooseCity'>
         <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArrayList}}" value="{{addressIndex}}"range-key="{{'name'}}">
-          <view class='itemName'> {{adrressArrayList[addressIndex].name}}</view>
-          <image mode="widthFix" src='/../images/down_arrow.png'></image>
+          <view class='itemName'> {{addressName}}</view>
+          <image mode="widthFix" src='../../images/down_arrow.png'></image>
         </picker>
       </view>
     </view>
     <view class='chooseBg'>
       <view class='chooseCity'>
         <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArrayList}}" value="{{categoryIndex}}"range-key="{{'name'}}">
-          <view class='itemName'>{{categoryArrayList[categoryIndex].name}}</view>
-          <image src='/../images/down_arrow.png'></image>
+          <view class='itemName'>{{category}}</view>
+          <image src='../../images/down_arrow.png'></image>
         </picker>
       </view>
     </view>
-    <view class="atHome" wx:if="{{goodList.length > 1}}">
+    <!-- <view class="atHome" wx:if="{{goodList.length > 1}}">
       <info-title title="本地精选" is-change="{{goodList.length > 1}}" bind:changeNext="selectLocationJobs" ptpId="locationChange"></info-title>
       <location-select resourseFrom="{{goodList}}" subResouseFrom="{{goodList}}" isAddress="true" screenIndex="{{localIndex}}"></location-select>
-    </view>
+    </view> -->
 
   </view>
   <view wx:if="{{goodList.length > 1}}">
     <view class="listPart" wx:for="{{goodList}}" wx:for-index="idx" wx:for-item="itemName">
       <view class="partJob_left">
-        <image src="/../images/company_logo.png" mode="widthFix" width="200rpx" height="144rpx"></image>
+        <image src="../../images/company_logo.png" mode="widthFix" width="200rpx" height="144rpx"></image>
       </view>
-      {{idx}}:{{itemName.name}}:{{itemName.price}}
+      <view class="partJob_center"></view>
+      <view class="partJob_right">{{item.salary}}</view>
+      {{idx}}:{{itemName.username}}:{{itemName.addr}}
     </view>
   </view>
   <view wx:else class="noneList">

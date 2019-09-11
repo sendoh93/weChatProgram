@@ -25,3 +25,18 @@
     width: 70%;
     margin-right: 32rpx;
 }
+
+.btn_group {
+    margin-top: 32rpx;
+    width: 100%;
+    height: 88rpx;
+
+}
+
+.btn_group button{
+    background-color: black;
+    font-size: 32rpx;
+    color: white;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+}

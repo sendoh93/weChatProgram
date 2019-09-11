@@ -16,4 +16,7 @@
     <input type="text" placeholder="请输入您的商户名"></input>
     </view>
   </view>
+  <view class="btn_group">
+  <button bindtap="applyEntry">提交</button>
+  </view>
   </view>

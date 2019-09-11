@@ -8,27 +8,15 @@ Page({
   },
   data: {
     townName: '万达广场',
-    category: '品类',
+    category: '默认',
     categoryId: 0,
     addressId:0,
-    addressName: '湖滨银泰',
+    addressName: '默认',
     addressIndex:0,
     categoryIndex:0,
     adrressArrayList: [],
     categoryArrayList:[],
-    goodList: [{
-      "name": "小老头烧烤",
-      "price": "180元/位",
-      "address": "万达广场1F金街道308"
-    }, {
-      "name": "小老头烧烤",
-      "price": "180元/位",
-      "address": "万达广场1F金街道308"
-    }, {
-      "name": "小老头烧烤",
-      "price": "180元/位",
-      "address": "万达广场1F金街道308"
-    }],
+    goodList: [],
     motto: '商家联盟',
     userInfo: {},
     hasUserInfo: false,
@@ -94,6 +82,27 @@ Page({
           console.log(res)
         }
       })
+      app.ajax({
+        url: '/merchant-business',
+        method: "GET",
+        data: {
+        },
+        success: function (res) {
+          var goodList = [];
+          res.data.rspdata.forEach(function (item, index) {
+            console.log(item.merchant)
+            goodList = goodList.concat(item.merchant)
+          })
+          console.log(res.data)
+          console.log(goodList)
+          that.setData({
+            goodList
+          })
+        },
+        fail: function (res) {
+          console.log(res)
+        }
+      })
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
@@ -144,12 +153,16 @@ Page({
           addressIndex: e.detail.value,  //每次选择了下拉列表的内容同时修改下标然后修改显示的内容，显示的内容和选择的内容一致
         })
         app.ajax({
-          url: '/merchant-business/0',
+          url: '/merchant-business/'+this.data.addressId.toString(),
           method: "GET",
           data: {
           },
           success: function (res) {
-            console.log(res)
+            console.log(res.data.rspdata.merchant)
+            let goodList=res.data.rspdata.merchant || [];
+            that.setData({
+              goodList
+            })
           },
           fail: function (res) {
             console.log(res)
@@ -163,15 +176,15 @@ Page({
           categoryIndex:e.detail.value,
         })
         app.ajax({
-          url: '/merchant-business',
+          url: '/merchant-category/'+this.data.categoryId.toString(),
           method: "GET",
           data: {
-            fields: "id,name",
           },
           success: function (res) {
-            let adrressArrayList = res.data.rspdata || []
+            console.log(res.data.rspdata.merchant)
+            let goodList=res.data.rspdata.merchant || [];
             that.setData({
-              adrressArrayList
+              goodList
             })
           },
           fail: function (res) {

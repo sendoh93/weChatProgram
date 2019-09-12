@@ -160,7 +160,7 @@ Page({
                 console.log(app_qrcode_url)
                 if (app_qrcode_url != ''){
                   wx.setStorage({
-                    key: 'qrcode',
+                    key: 'app_qrcode_url',
                     data: app_qrcode_url,
                     success: (res) => {
                       console.log(res)
@@ -169,6 +169,14 @@ Page({
                       console.log(res)
                     },
                   })
+                  wx.setStorageSync('is_merchant', res.data.rspdata.my.is_merchant)
+                  wx.setStorageSync('level', res.data.rspdata.my.level)
+                  wx.setStorageSync('user_id', res.data.rspdata.home.id)
+                  wx.setStorageSync('validityDay', res.data.rspdata.home.validityDay)
+                  wx.setStorageSync('merchantUsed', res.data.rspdata.home.merchantUsed)
+                  wx.setStorageSync('totalMerchants', res.data.rspdata.home.totalMerchants)
+                  wx.setStorageSync('username', res.data.rspdata.home.username)
+                  wx.setStorageSync('rmd_qrcode_url', res.data.rspdata.qrcode.rmd_qrcode_url)
                 }
             },
             fail: function(res) {

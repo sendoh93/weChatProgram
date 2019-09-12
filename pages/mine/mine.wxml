@@ -1,11 +1,7 @@
 <scroll-view scroll-y class="scrollPage">
-  <view class="cu-card ">
-    <view class="cu-item flex p-xs justify-start" style="background-color:black">
-    <button  open-type="getUserInfo" bindgetuserinfo="login">登录按钮</button>
-    </view>
-  </view>
+    <button class="btn1 bg-gradual-blue"  open-type="getUserInfo" bindgetuserinfo="login">一键登录</button>
   <view class="cu-card " bindtap="scanCode">
-    <view class="cu-item flex p-xs justify-start" style="background-color:black">
+    <view class="cu-item flex p-xs justify-start bg-gradual-blue" >
       <view class="cardTitle flex-treble">
         <text class="cuIcon-scan"></text><text>核销</text>
         <text class="cradtitleText">仅限客户使用</text>
@@ -15,7 +11,7 @@
       </view>
     </view>
   </view>
-  <view class="cu-card ">
+  <view class="cu-card " bindtap="memberCode">
     <view class="cu-item bg-gradual-blue flex p-xs justify-start" >
       <view class="cardTitle flex-treble">
         <text class="cuIcon-cascades"></text>会员码
@@ -25,7 +21,7 @@
       </view>
     </view>
   </view>
-  <view class="cu-card ">
+  <view class="cu-card " bindtap="toReward">
     <view class="cu-item bg-gradual-blue flex p-xs justify-start" >
       <view class="cardTitle flex-treble">
         <text class="cuIcon-shop"></text>推荐奖励
@@ -35,16 +31,5 @@
       </view>
     </view>
   </view>
-  <view class="cu-card ">
-    <view class="cu-item  flex p-xs justify-start" style="background-color:black">
-      <view class="cardTitle flex-treble">
-        <text class="cuIcon-form"></text>
-        <text>一级代理列表</text>
-        <text class="cradtitleText">仅特级代理使用</text>
-      </view>
-      <view class="cardTail flex-sub flex" bindtap="gotodaili">
-        查看<text class="cuIcon-triangledownfill"></text>
-      </view>
-    </view>
-  </view>
+ 
 </scroll-view>

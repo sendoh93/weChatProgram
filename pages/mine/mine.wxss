@@ -62,3 +62,13 @@
  font-size: 20rpx;
  margin-top: 20rpx;
 }
+
+.btn1{
+   width: 92%;
+  margin-top: 30rpx;
+  background-color: beige;
+  color: white;
+}
+.btn1::after{
+ border: 0;
+}

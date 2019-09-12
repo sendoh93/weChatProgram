@@ -1,14 +1,6 @@
 <!--pages/job/job.wxml-->
 <view class="center">
-  <view class="shareItem" bindtap="route2Buy">
+  <view class="shareItem bg-gradual-blue" bindtap="route2Buy">
     <text>购卡二维码分享</text>
-  </view>
-
-  <view class="shareItem" bindtap="route2Share">
-  <text>普通小程序分享</text>
-  </view>
-
-  <view class="shareItem" bindtap="route2Proxy">
-  <text>申请代理</text>
   </view>
 </view>

@@ -30,12 +30,12 @@
   </view>
 </view>
 <view class="grid flex-sub padding-lr col-3 grid-square bg-white">
-  <block wx:for="{{merchantWelfare}}" wx:key="*this">
+  <block wx:for="{{merchantWelfare}}" wx:key="*this" wx:for-index="idx">
     <view class="cu-item">
       <!--       <view class="bg-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);height:180rpx">-->
-      <view class="bg-img" style="background-image:url('{{item.img_url}}');height:180rpx">
-      </view>
-      <view class="text-content" style="text-align:center">
+      <!-- <view class="bg-img" style="background-image:url('{{item.img_url}}');height:180rpx"/> -->
+      <image class="bg-img" binderror="finishLoad" src="{{item.img_url}}" mode="widthFix" width="200rpx" height="100rpx" data-index='{{idx}}'/>
+      <view class="text-content" style="text-align:center;margin-bottom:20rpx">
         {{item.name}}
       </view>
     </view>

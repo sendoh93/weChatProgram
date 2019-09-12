@@ -1,3 +1,4 @@
+/* pages/member/member.wxss */
 
 .member {
     width: 100%;
@@ -32,17 +33,4 @@
 .cardBg image {
     width: 400rpx;
     height: 400rpx;
-}
-
-.good-detail__footer {
-  position: fixed;
-  width: 750rpx;
-  left: 0;
-  bottom: 0;
-  height: 100rpx;
-  background: url('http://chuantu.xyz/t6/702/1568262019x992245975.png');
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
 }

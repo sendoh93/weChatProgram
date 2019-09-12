@@ -7,7 +7,9 @@
     "pages/primaryAgent/primaryAgent",
     "pages/merchant/merchant",
     "pages/applyEntry/applyEntry",
-    "pages/jobDetail/jobDetail"
+    "pages/jobDetail/jobDetail",
+    "pages/member/member",
+    "pages/reward/reward"
   ],
   "window": {
     "backgroundTextStyle": "light",

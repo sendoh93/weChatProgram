@@ -11,7 +11,7 @@
 }
 
 .shareItem {
-  width: 100%;
+  width: 90%;
   height: 280rpx;
   align-items: center;
   display: flex;
@@ -19,7 +19,7 @@
   background-position-y: center;
   background-position-x: center;
   background-size: 100% 100%;
-  background-image: url('http://chuantu.xyz/t6/702/1568039558x1031866013.png');
+  border-radius: 10rpx;
 }
 
 .shareItem text {

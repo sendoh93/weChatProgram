@@ -1,0 +1,18 @@
+<!--pages/reward/reward.wxml-->
+<view class="reward">
+    <view class="rewardBtn" >
+            <text>累计返利金额 {{countMoney}}元</text>
+    </view>
+    <view class="listTop">
+        <text>昵称</text>
+        <text>返利金额</text>
+        <text>时间</text>
+    </view>
+    <view style="width:90%;margin-top:32rpx"  wx:for="{{rewardList}}" wx:for-index="idx" wx:for-item="item">
+    <view class="listTopItem">
+        <text>{{item.username}}</text>
+        <text>{{item.money}}</text>
+        <text>{{item.created_at}}</text>
+    </view>
+    </view>
+</view>

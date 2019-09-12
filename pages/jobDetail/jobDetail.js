@@ -21,6 +21,13 @@ Page({
     videoAndJpg:[],
   },
 
+  finishLoad: function (event) {
+    var index = event.currentTarget.dataset.index
+    var img = 'merchantWelfare[' + index + '].img_url'
+    this.setData({
+      [img]: '../../images/welfare.png'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

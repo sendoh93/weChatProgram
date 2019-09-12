@@ -6,13 +6,43 @@ Page({
    */
   data: {
     token: false,
+    costUserId:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    if (!options.scene) {
+    } else {
+      console.log(123)
+      var getQueryString = {}
+      var strs = decodeURIComponent(options.scene).split('&') //以&分割
+      //取得全部并赋值
+      for (var i = 0; i < strs.length; i++) {
+        getQueryString[strs[i].split('=')[0]] = unescape(strs[i].split('=')[1])
+      }
+      let costUserId = getQueryString['pid'] || '';
+      app.ajax({
+        url: '/user/verification',
+        method: "POST",
+        data: {
+          user_id: costUserId,
+        },
+        success: function (res) {
+          wx.showToast({
+            title: '核销成功',
+            icon:'none'
+          })
+        },
+        fail: function (res) {
+          wx.showToast({
+            title: '核销失败',
+            icon: 'none'
+          })
+        }
+      })
+    }
   },
 
   /**
@@ -143,6 +173,16 @@ Page({
       fail:(res) =>{
         console.log(res);
       }
+    })
+  },
+  memberCode() {
+    wx.navigateTo({
+      url: '../member/member',
+    })
+  },
+  toReward() {
+    wx.navigateTo({
+      url: '../reward/reward',
     })
   },
 })

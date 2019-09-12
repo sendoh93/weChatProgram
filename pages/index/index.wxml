@@ -64,7 +64,7 @@
     </view>
   </view>
   <view wx:else class="noneList">
-    <text>暂无相关兼职哦</text>
+    <text>暂无相关商户哦</text>
   </view>
   <view class="tips">
     <text>更多商户持续加入中</text>

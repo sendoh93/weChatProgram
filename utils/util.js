@@ -19,13 +19,45 @@ const formatNumber = n => {
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  downAndSaveImg: downAndSaveImg
 }
 
-function json2Form(json){
+
+function downAndSaveImg(imageUrl) {
+  // 下载文件  
+  wx.downloadFile({
+    url: imageUrl,
+    success: function (res) {
+      console.log("下载文件：success");
+      console.log(res);
+
+      // 保存图片到系统相册  
+      wx.saveImageToPhotosAlbum({
+        filePath: res.tempFilePath,
+        success(res) {
+          console.log("保存图片：success");
+          wx.showToast({
+            title: '保存成功',
+          });
+        },
+        fail(res) {
+          console.log("保存图片：fail");
+          console.log(res);
+        }
+      })
+    },
+    fail: function (res) {
+      console.log("下载文件：fail");
+      console.log(res);
+    }
+  })
+}
+
+function json2Form(json) {
   var str = [];
-  for(var p in json){
-    str.push(encodeURIComponent(p)+"="+encodeURIComponent(json[p]));
+  for (var p in json) {
+    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(json[p]));
   }
   return str.join("&");
 }
@@ -95,7 +127,7 @@ function arrayToString(fileData) {
 }
 
 module.exports = {
-  json2Form:json2Form,
+  json2Form: json2Form,
   extend,
   arrayToString
 }

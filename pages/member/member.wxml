@@ -1,8 +1,6 @@
 <view class="member">
-    <view>
     <image  src="../../images/share_bg.png"></image>
     <view class="cardBg">
-        <image src="{{qrcode}}" mode="widthFix"></image>
-    </view>
+        <image src="{{codeUrl}}" mode="widthFix"></image>
     </view>
 </view>

@@ -34,7 +34,6 @@
 }
 
 .btn_group button{
-    background-color: black;
     font-size: 32rpx;
     color: white;
     margin-left: 32rpx;

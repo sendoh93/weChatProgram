@@ -1,0 +1,62 @@
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{videoAndJpg}}" wx:key="*this">
+      <swiper-item>
+        <view wx:if="{{item.ext=='jpg'||item.ext=='png'}}">
+          <image src="{{item.url}}" class="slide-image" style="width:100%;height:180px" />
+        </view>
+        <view wx:else>
+          <video src="{{item.url}}" style="width:100%;height:180px"></video>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="bg-white" style="padding-top: 30rpx;padding-bottom: 30rpx">
+  <view class="action sub-title" style="margin-left:30rpx">
+    <view class="cu-avatar round lg" style="background-image:url('{{logo}}');"></view>
+    <text class="text-bold text-black" style="margin-left:30rpx;font-size:40rpx">{{name}}</text>
+  </view>
+  <view class="action sub-title margin-top" style="margin-left:30rpx;font-size:35rpx">
+    <text class="cuIcon-shop"></text>
+    <text> 营业中  | </text>
+    <text>{{business_hours}}</text>
+    <image mode="widthFix" src="../../images/phone.png" style="width:30rpx;position:absolute;right:30px" bindtap="makePhoneCall"></image>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom  margin-top ">
+  <view class='action'>
+    <text class='text-black text-bold'>商家福利</text>
+  </view>
+</view>
+<view class="grid flex-sub padding-lr col-3 grid-square bg-white">
+  <block wx:for="{{merchantWelfare}}" wx:key="*this">
+    <view class="cu-item">
+      <!--       <view class="bg-img" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);height:180rpx">-->
+      <view class="bg-img" style="background-image:url('{{item.img_url}}');height:180rpx">
+      </view>
+      <view class="text-content" style="text-align:center">
+        {{item.name}}
+      </view>
+    </view>
+  </block>
+</view>
+<view class="cu-bar bg-white solid-bottom">
+  <view class='action'>
+    <text class='text-black text-bold'>商家说明</text>
+  </view>
+</view>
+<view class="cu-list menu">
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">{{introduction}}</text>
+    </view>
+  </view>
+  <!-- <block wx:for="{{merchantWelfare}}" wx:key="*this">
+      <view class="cu-item">
+        <view class="content">
+          <text class="text-grey">{{item.name}}</text>
+        </view>
+      </view>        
+     </block> -->
+</view>

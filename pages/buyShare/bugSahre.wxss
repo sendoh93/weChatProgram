@@ -1,1 +1,5 @@
 /* pages/buyShare/bugSahre.wxss */
+
+.buy_card_bg {
+    background-color: white;
+}

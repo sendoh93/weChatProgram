@@ -1,2 +1,2 @@
 <!--pages/buyShare/bugSahre.wxml-->
-<text>pages/buyShare/bugSahre.wxml</text>
+<view class="buy_card_bg"></view>

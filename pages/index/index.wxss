@@ -60,16 +60,11 @@
 
 .top {
   width: 100%;
-  z-index: -1;
-}
-
-.top text {
-  z-index: 1;
+  background-color: white;
 }
 
 .banner {
   width: 100%;
-  z-index: -1;
 }
 
 .header {
@@ -78,6 +73,36 @@
   flex-direction: row;
   display: flex;
   background-color: white;
+}
+
+.rank_view {
+  display: flex;
+  flex-direction: row;
+  height: 60rpx;
+  background-color: white;
+}
+
+.rank_choose {
+  width: 100rpx;
+  margin-left: 32rpx;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item_empty {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank_item {
+  margin-left: 32rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 
 .chooseBg {
@@ -95,6 +120,11 @@
   float: left;
   display: flex;
   justify-content: center;
+}
+
+.logo {
+  width: 200rpx;
+  height: 144rpx;
 }
 
 .itemName {
@@ -164,26 +194,85 @@
 }
 
 .listPart {
-  padding: 32rpx;
   position: relative;
   overflow: hidden;
   border-bottom: 2rpx solid #EEE;
   background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 32rpx;
+
+}
+
+.good-detail__footer {
+  position: fixed;
+  width: 750rpx;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  background: url('http://chuantu.xyz/t6/702/1568262019x992245975.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .partJob_left {
-  max-width: 34%;
+  width: 34%;
   float: left;
   border-radius: 2rpx;
 }
 
 .partJob_center {
-  max-width: 34%;
+  height: 144rpx;
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+}
+
+.partJob_center text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  float: left;
+
+}
+
+.partJob_center_text {
+  margin-top: 20rpx;
+  margin-left: 16rpx;
+
 }
 
 .partJob_right {
-  max-width: 32%;
+  width: 32%;
+  position: relative;
+}
 
+.buy_btn_style {
+  float: right;
+  position: relative;
+  border: 0rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  height: 64rpx;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0rpx, 0rpx);
+  margin-right: initial;
+  background-color: #3040EE;
+  color: white;
+}
+
+.buy_btn_style::after {
+  border: none;
+  display: none;
 }
 
 .tips {
@@ -205,7 +294,7 @@
   height: 88rpx;
   background-color: #e9f5ff;
   color: #3040ee;
-  margin-bottom: 40rpx;
+  margin-bottom: 120rpx;
   border-radius: 4rpx;
   display: flex;
   flex-direction: row;

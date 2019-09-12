@@ -9,7 +9,17 @@
   </view> -->
   <view class="top">
     <image class="banner" mode="widthFix" width="100rpx" src="../../images/top_banner.png"></image>
-    <text>点击购买嗨遍全嘉兴</text>
+    <view style="background-color: white">
+      <view class="rank_view">
+        <view class="rank_choose" bindtap="changeAll" style="color: {{allFontcolor}}; background-color: {{allBgColor}}">总排行</view>
+        <view class="rank_choose" bindtap="changeDay" style="color: {{dayFontcolor}}; background-color: {{dayBgColor}}">日排行</view>
+      </view>
+      <view  class="item_empty" wx:if="{{listAll.length==0}}">暂无数据</view>
+      <view  wx:for="{{listAll}}" wx:for-index="idx" wx:for-item="item">
+        <view class="rank_item">{{item.name}}</view>
+      </view>
+    </view>
+
   </view>
   <view class="vertical"></view>
   <view class="specific-offer-title">
@@ -18,7 +28,7 @@
   <view class='header'>
     <view class='chooseBg'>
       <view class='chooseCity'>
-        <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArrayList}}" value="{{addressIndex}}"range-key="{{'name'}}">
+        <picker data-id="{{1}}" bindchange="choosAdress" range="{{adrressArrayList}}" value="{{addressIndex}}" range-key="{{'name'}}">
           <view class='itemName'> {{addressName}}</view>
           <image mode="widthFix" src='../../images/down_arrow.png'></image>
         </picker>
@@ -26,9 +36,9 @@
     </view>
     <view class='chooseBg'>
       <view class='chooseCity'>
-        <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArrayList}}" value="{{categoryIndex}}"range-key="{{'name'}}">
+        <picker data-id="{{2}}" bindchange="choosAdress" range="{{categoryArrayList}}" value="{{categoryIndex}}" range-key="{{'name'}}">
           <view class='itemName'>{{category}}</view>
-          <image src='../../images/down_arrow.png'></image>
+          <image src='../../images/down_arrow.png' />
         </picker>
       </view>
     </view>
@@ -41,11 +51,16 @@
   <view wx:if="{{goodList.length > 1}}">
     <view class="listPart" wx:for="{{goodList}}" wx:for-index="idx" wx:for-item="itemName">
       <view class="partJob_left">
-        <image src="../../images/company_logo.png" mode="widthFix" width="200rpx" height="144rpx"></image>
+        <image class="logo" binderror="finishLoad" data-index='{{idx}}' src="{{itemName.logo}}" mode="widthFix" width="200rpx" height="144rpx"/>
       </view>
-      <view class="partJob_center"></view>
-      <view class="partJob_right">{{item.salary}}</view>
-      {{idx}}:{{itemName.username}}:{{itemName.addr}}
+      <view class="partJob_center">
+      <view class="partJob_center_text" style="margin-top: 0rpx"><text>{{itemName.username}}</text></view>
+        <view class="partJob_center_text"> <text>{{itemName.addr}}</text></view>
+        <view class="partJob_center_text" wx:if="{{itemName.slogan !=' '}}">  <text >{{itemName.slogan}}</text></view>
+      </view>
+      <view class="partJob_right">
+       <button bindtap="openDetail" data-index='{{idx}}' class="buy_btn_style" role="button">查看会员福利</button>
+      </view>
     </view>
   </view>
   <view wx:else class="noneList">
@@ -56,8 +71,10 @@
   </view>
   <view>
     <button bindtap="applyEntry" class="enterBtn">
-      <image class='btnImg' src='../../images/icon_add.png'></image>
+      <image class='btnImg ' src='../../images/icon_add.png '></image>
       <view>商家入驻</view>
     </button>
   </view>
+  <view class="good-detail__footer" bindtap="buyCard">立即购卡</view>
+
 </view>

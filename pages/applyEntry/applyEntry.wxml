@@ -1,22 +1,22 @@
 <!--pages/applyEntry/applyEntry.wxml-->
 <view class="normalBg">
   <view class="editContent">
-  <view class="editView" style="margin-top: 40rpx;">
-    <text>姓名</text>
-    <input type="text" placeholder="请输入您的名字"></input>
+    <view class="editView" style="margin-top: 40rpx;">
+      <text>姓名</text>
+      <input bindinput="getName"  type="text" placeholder="请输入您的名字"></input>
     </view>
 
     <view class="editView">
-    <text>手机号/微信</text>
-    <input type="text" placeholder="请输入您的电话/微信号"></input>
+      <text>手机号/微信</text>
+      <input bindinput="getPhone" type="text" placeholder="请输入您的电话/微信号"></input>
     </view>
 
     <view class="editView" style="border-bottom: 0rpx solid #E2E2E2 ">
-    <text>商户名</text>
-    <input type="text" placeholder="请输入您的商户名"></input>
+      <text>商户名</text>
+      <input bindinput="getUserName" type="text" placeholder="请输入您的商户名"></input>
     </view>
   </view>
-  <view class="btn_group">
-  <button bindtap="applyEntry">提交</button>
+  <view class="btn_group" style="background-image: url(../../images/btn_bg.png)" plain='true'>
+    <button bindtap="applyEntry">提交</button>
   </view>
-  </view>
+</view>

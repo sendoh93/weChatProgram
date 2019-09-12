@@ -8,6 +8,7 @@ let params = {
   version,
 };
 
+let app_qrcode_url=''
 let deviceId = wx.getStorageSync("deviceId");
 if (deviceId === "") {
   deviceId = Math.random();
@@ -153,13 +154,23 @@ App({
         success(res) {
           if (res.statusCode === 200) {
             if (res.data.rspno != 10000) {
+              console.log('业务出错')
+              wx.showToast({
+                title: '业务出错',
+                icon: 'none'
+              })
               return;
             }
             success && success.apply(this, arguments);
             resolve(res.data);
           } else {
+            wx.showToast({
+              title: res.data.rspmsg||'网络请求出错',
+              icon: 'none'
+            })
             fail && fail.apply(this, arguments);
             reject(res);
+            
           }
         },
         fail(err) {

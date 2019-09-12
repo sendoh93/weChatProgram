@@ -4,7 +4,7 @@
     <button  open-type="getUserInfo" bindgetuserinfo="login">登录按钮</button>
     </view>
   </view>
-  <view class="cu-card ">
+  <view class="cu-card " bindtap="scanCode">
     <view class="cu-item flex p-xs justify-start" style="background-color:black">
       <view class="cardTitle flex-treble">
         <text class="cuIcon-scan"></text><text>核销</text>

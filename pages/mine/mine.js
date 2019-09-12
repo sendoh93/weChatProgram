@@ -84,7 +84,6 @@ Page({
       "code": "chenjie",
       "iv": "iv"
     };
-
     wx.login({
       success(res) {
         if (res.code) {
@@ -133,5 +132,17 @@ Page({
     })
 
 
-  }
+  },
+
+  scanCode() {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success: (res) => {
+        console.log(res);
+      },
+      fail:(res) =>{
+        console.log(res);
+      }
+    })
+  },
 })

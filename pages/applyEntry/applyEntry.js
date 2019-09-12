@@ -1,13 +1,53 @@
 // pages/applyEntry/applyEntry.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    inputName:'',
+    inputUserName:'',
+    inputPhone:''
 
   },
-  applyEntry:function(){
+  getName: function (e) {
+    this.data.inputName = e.detail.value
+  },
+  getUserName: function (e) {
+    this.data.inputUserName = e.detail.value
+  },
+  getPhone: function (e) {
+    this.data.inputPhone = e.detail.value
+  },
+  applyEntry(){
+    app.ajax({
+      url: '/merchant',
+      method: "POST",
+      data: {
+        name: this.data.inputName,
+        username: this.data.inputUserName,
+        phone: this.data.inputPhone,
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '申请入驻成功',
+          icon:'none'
+        })
+        setTimeout(function () {
+          //要延时执行的代码
+          wx.navigateBack({
+          })
+        }, 1000) //延迟时间 这里是1秒
+        console.log(res)
+      },
+      fail:function(res){
+        wx.showToast({
+          title: '申请入驻失败',
+          icon: 'none'
+        })
+      }
+    })
     console.log('点击了按钮')
   },
   /**

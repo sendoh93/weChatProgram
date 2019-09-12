@@ -7,6 +7,7 @@ Page({
   data: {
     token: false,
     costUserId:'',
+    loginStatus:'一键登录',
   },
 
   /**
@@ -61,8 +62,10 @@ Page({
     try {
       var value = wx.getStorageSync("token");
       if (value) {
+        let loginStatus= '已登录';
         that.setData({
           token: true,
+          loginStatus,
         })
       }
     } catch (e) {
@@ -143,10 +146,15 @@ Page({
                   key: 'token',
                   data: res.rspdata.access_token,
                   success: function(e) {
+                    let loginStatus = '已登录';
                     that.setData({
-                      token: true
+                      token: true,
+                      loginStatus,
                     })
-                    console.log(e)
+                    wx.showToast({
+                      title: '登录成功',
+                      icon:'none'
+                    })
                   }
                 })
               });

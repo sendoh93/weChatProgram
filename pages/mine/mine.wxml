@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="scrollPage">
-    <button class="btn1 bg-gradual-blue"  open-type="getUserInfo" bindgetuserinfo="login">一键登录</button>
+    <button class="btn1 bg-gradual-blue"  open-type="getUserInfo" bindgetuserinfo="login">{{loginStatus}}</button>
   <view class="cu-card " bindtap="scanCode">
     <view class="cu-item flex p-xs justify-start bg-gradual-blue" >
       <view class="cardTitle flex-treble">

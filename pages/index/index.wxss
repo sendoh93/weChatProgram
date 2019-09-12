@@ -100,9 +100,11 @@
 }
 
 .rank_item {
-  margin-left: 32rpx;
+  margin-left: 52rpx;
   margin-top: 10rpx;
   margin-bottom: 10rpx;
+  font-size: 32rpx;
+  font-weight: 500;
 }
 
 .chooseBg {

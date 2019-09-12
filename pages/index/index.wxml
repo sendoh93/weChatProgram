@@ -15,9 +15,10 @@
         <view class="rank_choose" bindtap="changeDay" style="color: {{dayFontcolor}}; background-color: {{dayBgColor}}">日排行</view>
       </view>
       <view  class="item_empty" wx:if="{{listAll.length==0}}">暂无数据</view>
-      <view  wx:for="{{listAll}}" wx:for-index="idx" wx:for-item="item">
+      <view style="margin-top:20rpx"  wx:for="{{listAll}}" wx:for-index="idx" wx:for-item="item">
         <view class="rank_item">{{item.name}}</view>
       </view>
+      <view style="width:100%;height:20rpx;background-color:#ffffff"></view>
     </view>
 
   </view>
